@@ -1,0 +1,14 @@
+To fix this, make sure your main CSS file (usually `styles.css` or similar) contains the necessary `@tailwind` directives to process `@apply`.  These directives are usually generated automatically when setting up Tailwind CSS. For example using `tailwindcss init` and adding required directives for base, components, utilities, etc.
+
+**Example (Solution):**
+
+```css
+/* styles.css or similar */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... your custom styles ... */
+```
+
+After adding or correctly configuring `@tailwind` directives and rebuilding your application, the `@apply` directive should function as expected. If you are using a framework like Next.js, ensure that your CSS is properly imported and configured to work with your setup and Tailwind plugin.
