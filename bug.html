@@ -1,0 +1,11 @@
+This error occurs when using Tailwind CSS with a framework like Next.js or Nuxt.js and you're trying to use a Tailwind directive (like `@apply`) within a style tag or a scoped style block.  Tailwind's `@apply` directive requires the presence of the `@tailwind` directives in the main CSS file for it to work correctly.  If you use `@apply` without the `@tailwind` directives, you'll encounter unexpected behavior because Tailwind won't process the `@apply` directives correctly, rendering your styles incorrectly or causing them not to appear at all.
+
+**Example (Bug):**
+```html
+<style scoped>
+  .my-class {
+    @apply bg-blue-500;
+  }
+</style>
+```
+This would fail if `@tailwind` directives are missing from your main css.
